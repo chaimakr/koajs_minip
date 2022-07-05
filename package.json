@@ -1,0 +1,21 @@
+{
+  "name": "KoaJS_minip",
+  "version": "1.0.0",
+  "description": "Modern and minimalist Node.js Framework\r <br>\r This project is inspired by traversy media <a link=\"https://www.youtube.com/watch?v=z84uTk5zmak \" >tutorial</a> .\r ### specifications\r * uses context obj ( contains req & res )",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-ejs": "^4.3.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^11.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
