@@ -9,4 +9,8 @@ This project is inspired by traversy media <a link="https://www.youtube.com/watc
 
 ### Test App
 the app is static using a table of things and trying different koa modules and functionalities (+ bootstrap)
+<p align="center">
+  <img src="./assets/img/show.png" alt="Show" />
+  <img src="./assets/img/add.png" alt="Add" />
 
+</p>
