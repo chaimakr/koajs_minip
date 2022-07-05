@@ -3,6 +3,7 @@ const KoaRouter = require ('koa-router');
 const json = require('koa-json');
 const path = require('path');
 const render = require('koa-ejs');
+const bodyParser = require('koa-bodyparser');
 
 
 const app = new Koa();
@@ -16,6 +17,8 @@ const things = ["get familliar with Hive tech requirements",
 
 //json prettier middleware
 app.use(json());
+//BodyParser middleware
+app.use(bodyParser());
 
 // starter example
 //app.use( async ctx => ctx.body = 'hello world');
@@ -31,6 +34,7 @@ render(app, {
 // index routers
 router.get('/', index);
 router.get('/add', showAdd);
+router.post('/add', add);
 
 
 // display list of things
@@ -41,10 +45,16 @@ async function index(ctx ){
     });
 }
 // show add page
-async function showAdd(ctx ){
+async function showAdd(ctx){
     await ctx.render('add');
 }
 
+// add thing
+async function add(ctx){
+    const body = ctx.request.body;
+    things.push(body.thing)
+    ctx.redirect('/');
+}
 
 router.get('/test', (ctx => ctx.body = "hello test"))
 
